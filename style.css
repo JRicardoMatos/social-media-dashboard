@@ -1,0 +1,305 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Inter", sans-serif;
+    color:white;
+    background: var(--clr-dark-toggle);
+}
+
+
+:root{
+    --clr-limegreen: hsl(163, 72%, 41%);
+    --clr-brightred: hsl(356, 69%, 56%);
+    --clr-face: hsl(208, 92%, 53%);
+    --clr-twit: hsl(203, 89%, 53%);
+    --clr-insta: linear gradient(to top right, hsl(37, 97%, 70%) to hsl(329, 70%, 58%));
+    --clr-yt: hsl(348, 97%, 39%);
+
+    --clr-dark-toggle: linear gradient(to top right, hsl(210, 78%, 56%) to hsl(146, 68%, 55%));
+    --clr-light-toggle: hsl(230, 22%, 74%);
+
+    --clr-dark-BG: hsl(230, 17%, 14%);
+    --clr-topdark-BG: hsl(232, 19%, 15%);
+    --clr-dcard-BG: hsl(228, 28%, 20%);
+    --clr-text-blue: hsl(228, 34%, 66%);
+    
+    --clr-toplight-BG: hsl(225, 100%, 98%);
+    --clr-lcard-BG: hsl(227, 47%, 96%);
+    --clr-ltext-gblue: hsl(228, 12%, 44%);
+    --clr-ltext-vdblue:hsl(230, 17%, 14%);
+}
+
+h1.lightcolor{
+    color:black;
+    transition:color 0.5s ease-out;
+}
+
+.topbackground{
+    position:absolute;
+    top:0%;
+    left:0%;
+    width:100vw;
+    height:35vh;
+    background:var(--clr-topdark-BG);
+    z-index: -1;
+    transition: background 0.5s ease-out;
+}
+.topbackground.lighttop{
+    background: var(--clr-toplight-BG);
+}
+
+.bottombackground{
+    position:absolute;
+    top:35%;
+    left:0%;
+    width:100vw;
+    height: 65vh;
+    background:var(--clr-dark-BG);
+    z-index: -1;
+    transition: background 0.5s ease-out;
+}
+.bottombackground.lightbottom{
+    background: white;
+}
+
+nav{
+    width:70vw;
+    height:20vh;
+    background: transparent;
+    margin:auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav h1{
+    font-size:1.7rem;
+    margin:0.1em 0em;
+}
+
+nav h5{
+    color: var(--clr-text-blue);
+    font-size:0.8em;
+}
+
+.nav-toggle{
+    display:flex;
+    align-items: center;
+}
+
+.toggle{
+    height:2em;
+    width:50px;
+    margin:0.5rem;
+    border-radius:900px;
+    background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    position:relative;
+}
+
+.card:hover, .lcard:hover{
+    background: hsl(229, 27%, 25%);;
+    cursor:pointer;
+}
+
+.toggle.lightback{
+    background:var(--clr-light-toggle);
+}
+
+.toggle .fas{
+    font-size:1.3rem;
+    color: var(--clr-topdark-BG);
+    position:absolute;
+    top:5%;
+    left:5%;
+    transition:left 0.5s ease; 
+}
+
+.toggle .fas:hover{
+    background: var(--clr-ltext-blue);
+    cursor:pointer;
+}
+
+.toggle .fas.lighttoggle{
+    top:5%;
+    left:45%;
+}
+
+.social-networks{
+    width:70vw;
+    margin:auto;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap:2rem;
+}
+
+.card{
+    height:30vh;
+    background: var(--clr-dcard-BG);
+    border-radius: 5px;
+    overflow:hidden;
+    position: relative;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: space-between;
+    padding:2rem;
+    transition: background 0.5s ease-out;
+}
+
+.card.cardlight{
+    background: var(--clr-lcard-BG);
+}
+
+.card.cardlight:hover{
+    background:hsl(229, 16%, 86%);
+}
+
+.card h1{
+    transition: color 0.5s ease-out;
+}
+
+.card h1.clr-subs{
+    color:black;
+}
+
+[class*=top-line]{
+    height:2%;
+    width:110%;
+    position:absolute;
+    left:-5%;
+    top:0%;
+    background:white;
+}
+
+.top-line-face{
+    background:var(--clr-face);
+}
+.top-line-twitter{
+    background:var(--clr-twit);
+}
+.top-line-insta{
+    background:linear-gradient(to right,  hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+}
+.top-line-youtube{
+    background:var(--clr-yt);
+}
+
+.at{
+    display:flex;
+    align-items:center;
+}
+
+.at h5{
+    color: var(--clr-text-blue);
+}
+
+.at img{
+    border-radius:3px;
+    margin:0.3em;
+}
+
+.social-networks h1{
+    font-size:3em;
+}
+
+.followers{
+    text-transform: uppercase;
+    font-size:0.7em;
+    color:var(--clr-text-blue);
+    font-weight: 400;
+    letter-spacing: 0.3em;
+}
+
+.up{
+    display:flex;
+}
+
+.up img{
+    margin:0.2em;
+}
+
+.up h5{
+    color: var(--clr-limegreen);
+    font-size:0.8rem;
+}
+
+.info{
+    text-align:center;
+    margin-bottom:0.5em;
+}
+
+.up-yt{
+    color:var(--clr-brightred);
+}
+
+.overview{
+    width:70vw;
+    margin:auto;
+    margin-top:2rem;
+}
+
+.over-title{
+    margin-bottom: 0.6rem;
+    transition: color 0.5s ease-out;
+}
+
+.over-title.overblack{
+    color:black;
+}
+
+.over-grid{
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap:2rem;
+}
+
+.lcard{
+    min-height: 7vw;
+    background: var(--clr-dcard-BG);
+    border-radius:5px;
+    padding:1rem;
+    display: flex;
+    justify-content: space-between;
+    transition:background 0.5s ease-out;
+}
+
+.lcard.lcardlight{
+    background:var(--clr-lcard-BG);
+}
+
+.lcard.lcardlight:hover{
+    background: hsl(229, 16%, 86%);
+}
+
+.lcard h1.numberslight{
+    color:black;
+}
+
+.numbers{
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+}
+
+.numbers h1{
+    font-size:2.5em;
+    transition:color 0.5s ease-out;
+}
+
+.numbers .social{
+    transform:scale(0.7);
+}
+
+.numbers h5{
+    color:var(--clr-text-blue)
+}
+
+.numbers h6{
+    color: var(--clr-limegreen);
+}
